@@ -2,7 +2,7 @@ import { StyleSheet, View, Image, FlatList } from "react-native";
 import products from '../data/products/products';
 
 export default function ProductScreen() {
-  return (
+  return ( 
     <FlatList
       data={products}
       renderItem={({ item }) => (
