@@ -6,7 +6,7 @@ const ProductItem = ({ item }) => (
     <Image source={{ uri: item.image }} style={styles.image} />
   </View>
 );
-
+ 
 export default function ProductScreen() {
   return (
     <FlatList
