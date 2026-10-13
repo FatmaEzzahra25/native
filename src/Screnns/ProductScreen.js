@@ -1,15 +1,17 @@
 import { StyleSheet, View, Image, FlatList } from "react-native";
 import products from '../data/products/products';
 
+const ProductItem = ({ item }) => (
+  <View style={styles.itemContainer}>
+    <Image source={{ uri: item.image }} style={styles.image} />
+  </View>
+);
+
 export default function ProductScreen() {
-  return ( 
+  return (
     <FlatList
       data={products}
-      renderItem={({ item }) => (
-        <View style={styles.itemContainer}>
-          <Image source={{ uri: item.image }} style={styles.image} />
-        </View>
-      )}
+      renderItem={ProductItem}
       numColumns={2}
       keyExtractor={(item) => item.id}
     />
